@@ -6,14 +6,9 @@ function nextPermutation(iteration, a, permutations) {
     if (checkSort(a)) {
         return permutations;
     }
-    if (iteration === 1) {
-        return permutations;
-    } 
     else {
-        permutations++;
-
         for (var i = 0; i < iteration - 1; i++) {
-            permutations = nextPermutation(iteration - 1, a, permutations)
+            permutations = nextPermutation(iteration - 1, a, permutations++)
 
             if (checkSort(a)) {
                 return permutations;
