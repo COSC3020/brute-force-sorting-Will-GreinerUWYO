@@ -9,7 +9,7 @@ function nextPermutation(iteration, a, permutations) {
     else {
         for (var i = 0; i < iteration - 1; i++) {
             permutations++;
-            permutations = nextPermutation(iteration - 1, a, permutations)
+            permutations = nextPermutation(iteration - 1, a, permutations);
 
             if (checkSort(a)) {
                 return permutations;
