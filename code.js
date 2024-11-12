@@ -7,13 +7,9 @@ function nextPermutation(iteration, a, permutations) {
         return permutations;
     }
     else {
+        permutations++;
         for (var i = 0; i < iteration - 1; i++) {
-            permutations++;
             permutations = nextPermutation(iteration - 1, a, permutations);
-
-            if (checkSort(a)) {
-                return permutations;
-            }
 
             if (iteration % 2 === 0) {
                 let temp = a[i];
