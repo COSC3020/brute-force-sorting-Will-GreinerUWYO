@@ -8,7 +8,8 @@ function nextPermutation(iteration, a, permutations) {
     }
     else {
         for (var i = 0; i < iteration - 1; i++) {
-            permutations = nextPermutation(iteration - 1, a, permutations++)
+            permutations++;
+            permutations = nextPermutation(iteration - 1, a, permutations)
 
             if (checkSort(a)) {
                 return permutations;
@@ -25,7 +26,7 @@ function nextPermutation(iteration, a, permutations) {
             }
         }
     }
-    return permutations;
+    return nextPermutation(iteration - 1, a, permutations);
 }
 
 function checkSort(a) {
