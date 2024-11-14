@@ -8,9 +8,11 @@ function nextPermutation(iteration, a, permutations) {
     }
     else {
         permutations++;
+        permutations = nextPermutation(iteration - 1, a, permutations);
         for (var i = 0; i < iteration - 1; i++) {
-            permutations = nextPermutation(iteration - 1, a, permutations);
-
+            if (checkSort(a)) {
+                return permutations;
+            }
             if (iteration % 2 === 0) {
                 let temp = a[i];
                 a[i] = a[iteration - 1];
@@ -21,8 +23,8 @@ function nextPermutation(iteration, a, permutations) {
                 a[iteration - 1] = temp;
             }
         }
+        return nextPermutation(iteration - 1, a, permutations);
     }
-    return nextPermutation(iteration - 1, a, permutations);
 }
 
 function checkSort(a) {
