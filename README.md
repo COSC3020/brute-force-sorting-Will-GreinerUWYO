@@ -20,3 +20,9 @@ randomly without memory instead of systematically trying them?
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+## Sources and Plagarism Statement
+
+For Heap's algorithm, [Wikipedia] (https://en.wikipedia.org/wiki/Heap%27s_algorithm)
+To help me learn how permutations would work, [Baeldung] (https://www.baeldung.com/java-array-permutations)
+Extra info on Brute Force Searches [Wikipedia] (https://en.wikipedia.org/wiki/Brute-force_search)
