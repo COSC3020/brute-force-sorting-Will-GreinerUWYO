@@ -26,7 +26,7 @@ This algorithm has a complexity of $O(n!*n)$ this is because there are n! possib
 The best case input is an already sorted list, there will be one permutation to check, and it will immediately determine correctness.
 The worst case input would be a function that is in the last checked combination, this varies based on the length of the input array, but for an input array of [a,b,c,d], the worst possible input would be [b,c,d,a] as that would be the last permutation the algorithm would check.
 
-The complexity does not change with random permutations. Checksort is still called for the length of the array, and there are still always n! possiblities, meaning our worst case is still $n*n!$
+The worst case complexity changes drastically for random permutations without memory. Without a way to store previously generated permutations, there is no guarantee you will ever generate the correct sequence. As n gets larger, this likelihood becomes more and more likely. The worst case for this instance is $O(infinity)$ because the worst possiblity is that it never happens.
 
 ## Sources and Plagarism Statement
 
