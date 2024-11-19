@@ -21,8 +21,15 @@ randomly without memory instead of systematically trying them?
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
+This algorithm has a complexity of $O(n!*n)$ this is because there are n! possible permutations of any given array, and checksort is called for every permutation, and that is called for the length of the list n. 
+
+The best case input is an already sorted list, there will be one permutation to check, and it will immediately determine correctness.
+The worst case input would be a function that is in the last checked combination, this varies based on the length of the input array, but for an input array of [a,b,c,d], the worst possible input would be [b,c,d,a] as that would be the last permutation the algorithm would check.
+
+The complexity does not change with random permutations. Checksort is still called for the length of the array, and there are still always n! possiblities, meaning our worst case is still $n*n!$
+
 ## Sources and Plagarism Statement
 
-For Heap's algorithm, [Wikipedia] (https://en.wikipedia.org/wiki/Heap%27s_algorithm)
-To help me learn how permutations would work, [Baeldung] (https://www.baeldung.com/java-array-permutations)
+For the basic implementation of Heap's algorithm, [Wikipedia] (https://en.wikipedia.org/wiki/Heap%27s_algorithm)
+To help me learn how permutation based mathemetical concepts I used [Baeldung] (https://www.baeldung.com/java-array-permutations)
 Extra info on Brute Force Searches [Wikipedia] (https://en.wikipedia.org/wiki/Brute-force_search)
